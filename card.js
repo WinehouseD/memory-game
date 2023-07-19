@@ -1,7 +1,6 @@
 /**
  * describes front or back side of each card
  */
-
 class Card {
   #image;
   #element;
@@ -10,18 +9,18 @@ class Card {
   constructor(image) {
     this.#image = image;
 
-    this.#element = document.querySelector("div");
+    this.#element = document.createElement("div");
     this.#element.classList.add("card");
     this.#element.style.backgroundImage = `url('${this.coverPath}')`;
-    this.#element.connectedCard = this;
+    this.#element.connectedCard = this; // DOM property will contain link of card copy
   }
 
   get imagePath() {
-    return `images/${this.image}`;
+    return `images/${this.#image}`;
   }
 
   get coverPath() {
-    return `images/card-cover.png`;
+    return "images/card-cover.png";
   }
 
   get element() {

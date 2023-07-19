@@ -1,7 +1,6 @@
 /**
  * cards deck. class for creating and shuffling cards. includes list of cards images
  */
-
 class Deck {
   #cardsImages = [
     "apple.png",
